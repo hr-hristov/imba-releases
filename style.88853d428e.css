@@ -43,10 +43,13 @@ a { color: inherit; }
 button { font: inherit; color: inherit; }
 
 .page { max-width: 1320px; margin: 0 auto; padding: 40px var(--gutter) 56px; }
-.top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
-.brand { font-family: var(--pixel); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--signal); text-decoration: none; text-shadow: 0 0 10px rgba(255, 91, 46, .45); }
-.top a.all { font-size: 14px; font-weight: 650; color: var(--dim); text-decoration: none; }
-.top a.all:hover { color: var(--ink); }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { font-family: var(--pixel); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--signal); text-decoration: none; text-shadow: 0 0 10px rgba(255, 91, 46, .45); white-space: nowrap; }
+/* The two tabs of the site: Releases and Features. */
+.tabs { display: flex; gap: 4px; }
+.tabs a { font-size: 14px; font-weight: 650; color: var(--dim); text-decoration: none; padding: 5px 13px; border: 1px solid transparent; border-radius: 999px; white-space: nowrap; transition: color .2s, border-color .2s; }
+.tabs a:hover { color: var(--ink); }
+.tabs a[data-on] { color: var(--ink); border-color: var(--line); background: var(--panel); }
 
 h1 { margin: 22px 0 6px; font-size: clamp(30px, 5vw, 48px); line-height: 1.05; font-weight: 800; font-stretch: 112%; letter-spacing: -.01em; }
 .covers { margin: 0; color: var(--muted); font-size: 16px; }
@@ -81,10 +84,30 @@ h2 { margin: 8px 0 10px; font-size: clamp(21px, 2.4vw, 28px); line-height: 1.15;
 .steps .past button { color: var(--ink); }
 .steps .now button { border-color: var(--signal); color: var(--ink); background: rgba(255, 91, 46, .14); }
 
-.also { margin-top: 8px; padding: 22px 24px; border: 1px solid var(--line); background: var(--panel); border-radius: 8px; }
-.also h3 { margin: 0 0 10px; font-family: var(--pixel); font-size: 12px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+.also, .keys { margin-top: 8px; padding: 22px 24px; border: 1px solid var(--line); background: var(--panel); border-radius: 8px; }
+.also h3, .keys h3 { margin: 0 0 10px; font-family: var(--pixel); font-size: 12px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
 .also ul { margin: 0; padding-left: 20px; color: var(--muted); }
 .also li + li { margin-top: 4px; }
+
+/* A feature page's keys: what each does, and its key, in groups. */
+.keys table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.keys thead th { text-align: left; padding: 0 0 6px; font-size: 13px; font-weight: 650; color: var(--dim); }
+.keys thead th:last-child, .keys td.key { text-align: right; }
+.keys .group th { text-align: left; padding: 22px 0 6px; font-size: 14px; font-weight: 750; color: var(--signal); border-bottom: 1px solid var(--line); }
+.keys td { padding: 8px 0; border-bottom: 1px dashed var(--line); color: var(--muted); vertical-align: top; }
+.keys tbody tr:last-child td { border-bottom: 0; }
+.keys td.key { padding-left: 16px; white-space: nowrap; color: var(--dim); font-size: 13px; }
+kbd { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 13px; color: var(--ink); background: var(--night); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 1px 7px; white-space: nowrap; }
+
+/* The Features tab: every feature in a table, each opening its page. */
+.features { width: 100%; margin-top: 28px; border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); overflow: hidden; }
+.features th { text-align: left; padding: 12px 20px; font-size: 13px; font-weight: 650; color: var(--dim); border-bottom: 1px solid var(--line); }
+.features td { padding: 20px; color: var(--muted); vertical-align: middle; }
+.features tr + tr td { border-top: 1px dashed var(--line); }
+.features .name a { display: grid; gap: 10px; width: 260px; text-decoration: none; font-size: 21px; font-weight: 750; font-stretch: 106%; color: var(--ink); }
+.features .name a:hover span { color: var(--signal); }
+.features .name img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+.features .count { white-space: nowrap; color: var(--dim); font-size: 14px; }
 
 .note { margin: 28px 0 0; color: var(--dim); font-size: 14px; }
 
@@ -109,8 +132,17 @@ h2 { margin: 8px 0 10px; font-size: clamp(21px, 2.4vw, 28px); line-height: 1.15;
   .page { padding-top: 24px; }
   .steps { gap: 6px; }
   .steps button { min-height: 32px; padding: 3px 11px; font-size: 13px; }
-  .also { padding: 16px; }
+  .also, .keys { padding: 16px; }
+  .tabs a { padding: 4px 10px; font-size: 13px; }
+  .keys table { font-size: 14px; }
+  .keys td.key { padding-left: 10px; }
+  /* On a phone each feature is a block of its own: picture, words, count. */
+  .features thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .features tr, .features td { display: block; }
+  .features td { padding: 0 16px 12px; }
+  .features td.name { padding-top: 16px; }
+  .features .name a { width: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .steps button, .release { transition: none; }
+  .steps button, .release, .tabs a { transition: none; }
 }

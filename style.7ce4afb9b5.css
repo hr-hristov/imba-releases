@@ -1,0 +1,116 @@
+/* The colours and type of the imba website, so a release page reads as imba's
+   own. The two fonts are the website's, kept in fonts/. */
+@font-face {
+  font-family: 'Archivo Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url(fonts/archivo-latin-wdth-normal.e3a28eade2.woff2) format('woff2-variations');
+}
+@font-face {
+  font-family: 'Silkscreen';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(fonts/silkscreen-latin-400-normal.e6c72ea470.woff2) format('woff2');
+}
+
+:root {
+  --night: #07060b;
+  --panel: #110f18;
+  --line: #262432;
+  --ink: #f6f2ea;
+  --muted: #a39db8;
+  --dim: #6d6882;
+  --signal: #ff5b2e;
+  --research: #c6ff3a;
+  --build: #ff8a1f;
+  --check: #a58bff;
+  --proven: #5dff8a;
+  --plan: #3b82f6;
+  --done: #db4492;
+  --sans: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --pixel: 'Silkscreen', ui-monospace, monospace;
+  --gutter: clamp(16px, 5vw, 64px);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--night); }
+body { margin: 0; background: var(--night); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+
+.page { max-width: 1320px; margin: 0 auto; padding: 40px var(--gutter) 56px; }
+.top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.brand { font-family: var(--pixel); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--signal); text-decoration: none; text-shadow: 0 0 10px rgba(255, 91, 46, .45); }
+.top a.all { font-size: 14px; font-weight: 650; color: var(--dim); text-decoration: none; }
+.top a.all:hover { color: var(--ink); }
+
+h1 { margin: 22px 0 6px; font-size: clamp(30px, 5vw, 48px); line-height: 1.05; font-weight: 800; font-stretch: 112%; letter-spacing: -.01em; }
+.covers { margin: 0; color: var(--muted); font-size: 16px; }
+.update { margin: 16px 0 8px; display: inline-flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; border: 1px solid var(--line); background: var(--panel); padding: 7px 12px; border-radius: 6px; font-size: 14px; color: var(--muted); }
+.update b { color: var(--proven); font-weight: 650; }
+
+/* One feature to a row: its film on one side, its words on the other,
+   swapping sides down the page. */
+.feature { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 36px; align-items: center; padding: 36px 0; border-top: 1px dashed var(--line); }
+.feature:first-of-type { margin-top: 28px; }
+.feature:nth-of-type(even) { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+.feature:nth-of-type(even) .film { order: 2; }
+.tag { font-family: var(--pixel); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.feature:nth-of-type(6n+1) .tag { color: var(--research); }
+.feature:nth-of-type(6n+2) .tag { color: var(--check); }
+.feature:nth-of-type(6n+3) .tag { color: var(--plan); }
+.feature:nth-of-type(6n+4) .tag { color: var(--build); }
+.feature:nth-of-type(6n+5) .tag { color: var(--done); }
+.feature:nth-of-type(6n) .tag { color: var(--proven); }
+h2 { margin: 8px 0 10px; font-size: clamp(21px, 2.4vw, 28px); line-height: 1.15; font-weight: 750; font-stretch: 106%; }
+.feature p { margin: 0; color: var(--muted); }
+
+.film { margin: 0; min-width: 0; }
+.film video { display: block; width: 100%; height: auto; aspect-ratio: 1120 / 700; background: #000; border: 1px solid var(--line); border-radius: 8px; }
+/* The phone cut is a whole phone screen: it keeps to most of the screen's
+   height, so the strip under it stays in view. */
+.film[data-cut='phone'] video { width: min(100%, calc(72svh * 390 / 844)); aspect-ratio: 390 / 844; margin: 0 auto; }
+.steps { list-style: none; margin: 0; padding: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.film[data-cut='phone'] .steps { justify-content: center; }
+.steps button { min-height: 34px; border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: 999px; padding: 4px 13px; font-size: 14px; cursor: pointer; transition: border-color .2s, background .2s, color .2s; }
+.steps button:hover { border-color: var(--ink); }
+.steps .past button { color: var(--ink); }
+.steps .now button { border-color: var(--signal); color: var(--ink); background: rgba(255, 91, 46, .14); }
+
+.also { margin-top: 8px; padding: 22px 24px; border: 1px solid var(--line); background: var(--panel); border-radius: 8px; }
+.also h3 { margin: 0 0 10px; font-family: var(--pixel); font-size: 12px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+.also ul { margin: 0; padding-left: 20px; color: var(--muted); }
+.also li + li { margin-top: 4px; }
+
+.note { margin: 28px 0 0; color: var(--dim); font-size: 14px; }
+
+/* The front page: every release, newest first. */
+.releases { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 16px; }
+.release { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 28px; align-items: center; padding: 22px; border: 1px solid var(--line); background: var(--panel); border-radius: 10px; text-decoration: none; transition: border-color .2s; }
+.release:hover { border-color: var(--signal); }
+.release img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+.release h2 { margin-top: 0; }
+.release .covers { font-size: 15px; }
+.release ul { margin: 14px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.release li { border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px; font-size: 13px; color: var(--muted); }
+.release .open { display: inline-block; margin-top: 16px; font-weight: 650; color: var(--signal); }
+
+@media (max-width: 899px) {
+  .feature, .feature:nth-of-type(even) { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 28px 0; }
+  .feature:nth-of-type(even) .film { order: 0; }
+  .release { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 16px; }
+}
+@media (max-width: 699px) {
+  body { font-size: 16px; }
+  .page { padding-top: 24px; }
+  .steps { gap: 6px; }
+  .steps button { min-height: 32px; padding: 3px 11px; font-size: 13px; }
+  .also { padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .steps button, .release { transition: none; }
+}

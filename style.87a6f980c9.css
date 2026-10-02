@@ -56,6 +56,17 @@ h1 { margin: 22px 0 6px; font-size: clamp(30px, 5vw, 48px); line-height: 1.05; f
 .update { margin: 16px 0 8px; display: inline-flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; border: 1px solid var(--line); background: var(--panel); padding: 7px 12px; border-radius: 6px; font-size: 14px; color: var(--muted); }
 .update b { color: var(--proven); font-weight: 650; }
 
+/* A feature page opens on the idea behind the feature, set larger than the
+   words beside the films. */
+.idea { margin: 0; max-width: 40em; font-size: clamp(18px, 2vw, 21px); line-height: 1.45; color: var(--ink); }
+/* What the feature keeps on screen against what it leaves out, a pair a row. */
+.trade { width: 100%; margin: 20px 0 8px; border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); font-size: 15px; }
+.trade th { width: 50%; text-align: left; padding: 12px 20px; font-size: 13px; font-weight: 650; color: var(--dim); border-bottom: 1px solid var(--line); }
+.trade td { padding: 11px 20px; vertical-align: top; color: var(--ink); }
+.trade td + td { color: var(--dim); }
+.trade tr + tr td { border-top: 1px dashed var(--line); }
+.rest { margin: 18px 0 0; color: var(--muted); }
+
 /* One feature to a row: its film on one side, its words on the other,
    swapping sides down the page. */
 .feature { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 36px; align-items: center; padding: 36px 0; border-top: 1px dashed var(--line); }
@@ -136,6 +147,9 @@ kbd { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 
   .tabs a { padding: 4px 10px; font-size: 13px; }
   .keys table { font-size: 14px; }
   .keys td.key { padding-left: 10px; }
+  .idea { font-size: 17px; }
+  .trade { font-size: 14px; }
+  .trade th, .trade td { padding: 9px 12px; }
   /* On a phone each feature is a block of its own: picture, words, count. */
   .features thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .features tr, .features td { display: block; }

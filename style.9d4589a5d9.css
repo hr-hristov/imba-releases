@@ -30,6 +30,7 @@
   --proven: #5dff8a;
   --plan: #3b82f6;
   --done: #db4492;
+  --alert: #ff2e4a;
   --sans: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
   --pixel: 'Silkscreen', ui-monospace, monospace;
   --gutter: clamp(16px, 5vw, 64px);
@@ -57,15 +58,61 @@ h1 { margin: 22px 0 6px; font-size: clamp(30px, 5vw, 48px); line-height: 1.05; f
 .update b { color: var(--proven); font-weight: 650; }
 
 /* A feature page opens on the idea behind the feature, set larger than the
-   words beside the films. */
-.idea { margin: 0; max-width: 40em; font-size: clamp(18px, 2vw, 21px); line-height: 1.45; color: var(--ink); }
-/* What the feature keeps on screen against what it leaves out, a pair a row. */
-.trade { width: 100%; margin: 20px 0 8px; border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); font-size: 15px; }
-.trade th { width: 50%; text-align: left; padding: 12px 20px; font-size: 13px; font-weight: 650; color: var(--dim); border-bottom: 1px solid var(--line); }
-.trade td { padding: 11px 20px; vertical-align: top; color: var(--ink); }
-.trade td + td { color: var(--dim); }
-.trade tr + tr td { border-top: 1px dashed var(--line); }
-.rest { margin: 18px 0 0; color: var(--muted); }
+   words beside the films, and why the idea is needed. */
+.idea { margin: 0; max-width: 40em; font-size: clamp(19px, 2.1vw, 23px); line-height: 1.4; font-weight: 600; color: var(--ink); }
+.why { margin: 12px 0 0; max-width: 42em; color: var(--muted); line-height: 1.55; }
+.touch { margin: 8px 0 0; color: var(--dim); font-size: 14px; }
+.rest { margin: 22px 0 0; color: var(--muted); }
+
+/* A chapter of a feature page, the way the imba website explains imba: the
+   trap the reader's mind falls into, then the part of the feature that answers
+   it beside its film or pictures. */
+.chapter { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); gap: 40px; align-items: start; padding: 44px 0; border-top: 1px dashed var(--line); }
+.chapter:first-of-type { margin-top: 32px; }
+.chapter.wide { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.chapter.wide .words { max-width: 720px; }
+.step { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; font-family: var(--pixel); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--signal); }
+.step b { font-weight: 400; color: var(--night); background: var(--signal); padding: 2px 6px 1px; }
+.trap { margin: 0 0 20px; padding: 2px 0 2px 16px; border-left: 3px solid var(--alert); }
+.trap p { margin: 0; }
+.trap .tl { margin-bottom: 6px; font-family: var(--pixel); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--alert); }
+.trap .thought { margin-bottom: 6px; font-size: clamp(20px, 2.1vw, 26px); font-weight: 750; font-style: italic; line-height: 1.2; }
+.trap .bias { font-size: 15px; line-height: 1.45; color: var(--muted); }
+.trap .bias b { color: #d6d1e6; font-weight: 650; }
+.chapter h2, .traps h2 { margin: 0 0 12px; font-size: clamp(26px, 3vw, 36px); line-height: 1.05; font-weight: 800; font-stretch: 108%; }
+.chapter h2 span, .traps h2 span { color: var(--signal); }
+.say { margin: 0; color: var(--muted); }
+.keyrow { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 16px 0 0; font-size: 14px; color: var(--muted); }
+.keyrow span { white-space: nowrap; }
+/* How many spawns wait and work once the chapter is done. */
+.counts { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
+.counts span { white-space: nowrap; font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 13px; font-weight: 600; border: 1px solid var(--line); border-radius: 999px; padding: 2px 11px; background: var(--panel); }
+.counts .waiting { color: var(--signal); border-color: rgba(255, 91, 46, .5); }
+.counts .working { color: var(--proven); border-color: rgba(93, 255, 138, .35); }
+.closer { margin: 18px 0 0; color: var(--ink); }
+
+/* A chapter's pictures: stills of the screen, two of them side by side with
+   the key that turns the first into the second between them. */
+.pictures { min-width: 0; }
+.pictures figure { margin: 0; min-width: 0; }
+.pictures img { display: block; max-width: 100%; height: auto; margin: 0 auto; border: 1px solid var(--line); border-radius: 8px; background: #000; }
+.pictures figcaption { margin-top: 10px; font-size: 14px; line-height: 1.4; color: var(--muted); }
+.pictures figcaption b { display: block; color: var(--ink); font-weight: 700; }
+.pair { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 20px; align-items: start; }
+.pair img { width: 100%; }
+.switch { align-self: center; display: grid; justify-items: center; gap: 6px; font-family: var(--pixel); font-size: 22px; line-height: 1; color: var(--signal); }
+
+/* The recap: every trap struck through beside its answer. */
+.traps { margin-top: 8px; padding-top: 44px; border-top: 1px solid var(--line); }
+.kick { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; font-family: var(--pixel); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--signal); }
+.kick::before { content: ''; width: 8px; height: 8px; background: var(--signal); box-shadow: 0 0 10px var(--signal); }
+.trap-cards { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.trap-cards li { display: flex; flex-direction: column; gap: 8px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+.trap-cards .no { font-family: var(--pixel); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--signal); }
+.trap-cards s { font-size: 18px; font-weight: 750; font-style: italic; line-height: 1.25; text-decoration-color: var(--alert); text-decoration-thickness: 2px; }
+.trap-cards small { font-family: var(--pixel); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
+.trap-cards .fix { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line); color: #d6d1e6; font-size: 15px; font-weight: 650; }
+.trap-cards .caps { white-space: nowrap; }
 
 /* One feature to a row: its film on one side, its words on the other,
    swapping sides down the page. */
@@ -95,19 +142,11 @@ h2 { margin: 8px 0 10px; font-size: clamp(21px, 2.4vw, 28px); line-height: 1.15;
 .steps .past button { color: var(--ink); }
 .steps .now button { border-color: var(--signal); color: var(--ink); background: rgba(255, 91, 46, .14); }
 
-.also, .keys { margin-top: 8px; padding: 22px 24px; border: 1px solid var(--line); background: var(--panel); border-radius: 8px; }
-.also h3, .keys h3 { margin: 0 0 10px; font-family: var(--pixel); font-size: 12px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+.also { margin-top: 8px; padding: 22px 24px; border: 1px solid var(--line); background: var(--panel); border-radius: 8px; }
+.also h3 { margin: 0 0 10px; font-family: var(--pixel); font-size: 12px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
 .also ul { margin: 0; padding-left: 20px; color: var(--muted); }
 .also li + li { margin-top: 4px; }
 
-/* A feature page's keys: what each does, and its key, in groups. */
-.keys table { width: 100%; border-collapse: collapse; font-size: 15px; }
-.keys thead th { text-align: left; padding: 0 0 6px; font-size: 13px; font-weight: 650; color: var(--dim); }
-.keys thead th:last-child, .keys td.key { text-align: right; }
-.keys .group th { text-align: left; padding: 22px 0 6px; font-size: 14px; font-weight: 750; color: var(--signal); border-bottom: 1px solid var(--line); }
-.keys td { padding: 8px 0; border-bottom: 1px dashed var(--line); color: var(--muted); vertical-align: top; }
-.keys tbody tr:last-child td { border-bottom: 0; }
-.keys td.key { padding-left: 16px; white-space: nowrap; color: var(--dim); font-size: 13px; }
 kbd { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 13px; color: var(--ink); background: var(--night); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 1px 7px; white-space: nowrap; }
 
 /* The Features tab: every feature in a table, each opening its page. */
@@ -137,19 +176,31 @@ kbd { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 
   .feature, .feature:nth-of-type(even) { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 28px 0; }
   .feature:nth-of-type(even) .film { order: 0; }
   .release { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 16px; }
+  .chapter { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 32px 0; }
+  .trap-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 699px) {
   body { font-size: 16px; }
   .page { padding-top: 24px; }
   .steps { gap: 6px; }
   .steps button { min-height: 32px; padding: 3px 11px; font-size: 13px; }
-  .also, .keys { padding: 16px; }
+  .also { padding: 16px; }
   .tabs a { padding: 4px 10px; font-size: 13px; }
-  .keys table { font-size: 14px; }
-  .keys td.key { padding-left: 10px; }
-  .idea { font-size: 17px; }
-  .trade { font-size: 14px; }
-  .trade th, .trade td { padding: 9px 12px; }
+  .idea { font-size: 18px; }
+  .why { font-size: 15px; }
+  .trap .bias { font-size: 14px; }
+  .chapter { padding: 28px 0; }
+  .chapter:first-of-type { margin-top: 24px; }
+  /* A phone's stills stand side by side with only the arrow between them;
+     on a phone the key is the crosshair on the bar. */
+  .pair { gap: 8px; }
+  .switch kbd { display: none; }
+  .switch { font-size: 18px; }
+  .pictures figcaption { font-size: 13px; }
+  .traps { padding-top: 32px; }
+  .trap-cards { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .trap-cards li { padding: 14px 16px; }
+  .trap-cards s { font-size: 17px; }
   /* On a phone each feature is a block of its own: picture, words, count. */
   .features thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .features tr, .features td { display: block; }
@@ -159,4 +210,5 @@ kbd { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 
 }
 @media (prefers-reduced-motion: reduce) {
   .steps button, .release, .tabs a { transition: none; }
+  .kick::before { box-shadow: none; }
 }

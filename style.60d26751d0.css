@@ -79,8 +79,8 @@ h1 { margin: 22px 0 6px; font-size: clamp(30px, 5vw, 48px); line-height: 1.05; f
 .trap .thought { margin-bottom: 6px; font-size: clamp(20px, 2.1vw, 26px); font-weight: 750; font-style: italic; line-height: 1.2; }
 .trap .bias { font-size: 15px; line-height: 1.45; color: var(--muted); }
 .trap .bias b { color: #d6d1e6; font-weight: 650; }
-.chapter h2, .traps h2 { margin: 0 0 12px; font-size: clamp(26px, 3vw, 36px); line-height: 1.05; font-weight: 800; font-stretch: 108%; }
-.chapter h2 span, .traps h2 span { color: var(--signal); }
+.chapter h2, .traps h2, .reference h2 { margin: 0 0 12px; font-size: clamp(26px, 3vw, 36px); line-height: 1.05; font-weight: 800; font-stretch: 108%; }
+.chapter h2 span, .traps h2 span, .reference h2 span { color: var(--signal); }
 .say { margin: 0; color: var(--muted); }
 .keyrow { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 16px 0 0; font-size: 14px; color: var(--muted); }
 .keyrow span { white-space: nowrap; }
@@ -113,6 +113,22 @@ h1 { margin: 22px 0 6px; font-size: clamp(30px, 5vw, 48px); line-height: 1.05; f
 .trap-cards small { font-family: var(--pixel); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
 .trap-cards .fix { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line); color: #d6d1e6; font-size: 15px; font-weight: 650; }
 .trap-cards .caps { white-space: nowrap; }
+
+/* Every key and button, after the story: a group to a heading, and a row to a
+   control, its keys and what it does. A phone puts the control and its keys on
+   one line and what it does under them. */
+.reference { margin-top: 44px; padding-top: 44px; border-top: 1px solid var(--line); }
+.reference > .say { max-width: 42em; }
+.ref-group { margin-top: 30px; }
+.ref-group h3 { margin: 0 0 10px; font-family: var(--pixel); font-size: 12px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+.ref-group > p { margin: 0 0 12px; max-width: 42em; color: var(--muted); font-size: 15px; }
+.ref-rows { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+.ref-rows li { display: grid; grid-template-columns: minmax(0, 16rem) 9.5rem minmax(0, 1fr); gap: 18px; align-items: baseline; padding: 11px 18px; }
+.ref-rows li + li { border-top: 1px dashed var(--line); }
+.ref-rows .press { color: var(--ink); font-weight: 650; }
+.ref-rows .caps { white-space: nowrap; color: var(--dim); }
+.ref-rows .caps i { font-style: normal; font-size: 13px; }
+.ref-rows .does { color: var(--muted); }
 
 /* One feature to a row: its film on one side, its words on the other,
    swapping sides down the page. */
@@ -201,6 +217,12 @@ kbd { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 
   .trap-cards { grid-template-columns: minmax(0, 1fr); gap: 10px; }
   .trap-cards li { padding: 14px 16px; }
   .trap-cards s { font-size: 17px; }
+  .reference { margin-top: 32px; padding-top: 32px; }
+  .ref-group { margin-top: 24px; }
+  .ref-rows li { grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; padding: 10px 14px; }
+  .ref-rows .press:empty { display: none; }
+  .ref-rows .press:empty + .caps { grid-column: 1 / -1; }
+  .ref-rows .does { grid-column: 1 / -1; font-size: 15px; }
   /* On a phone each feature is a block of its own: picture, words, count. */
   .features thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .features tr, .features td { display: block; }

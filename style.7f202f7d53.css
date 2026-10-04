@@ -226,6 +226,9 @@ kbd { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 
   /* On a phone each feature is a block of its own: picture, words, count. */
   .features thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .features tr, .features td { display: block; }
+  /* Stacked cells would each draw the row's line; one line above the block. */
+  .features tr + tr td { border-top: 0; }
+  .features tr + tr { border-top: 1px dashed var(--line); }
   .features td { padding: 0 16px 12px; }
   .features td.name { padding-top: 16px; }
   .features .name a { width: auto; }

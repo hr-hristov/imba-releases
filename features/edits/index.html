@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Edits in imba</title>
-<meta name="description" content="What a turn changed and what it reaches, before you read a line of the diff.">
+<meta name="description" content="How much of the codebase a turn changed and how much of it stands on the change, before you open a file.">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="imba">
 <meta property="og:title" content="Edits in imba">
-<meta property="og:description" content="What a turn changed and what it reaches, before you read a line of the diff.">
+<meta property="og:description" content="How much of the codebase a turn changed and how much of it stands on the change, before you open a file.">
 <meta property="og:image" content="https://hr-hristov.github.io/imba-releases/films/features/edits/the-goal.64e4c8bef5.png">
 <meta property="og:url" content="https://hr-hristov.github.io/imba-releases/features/edits/">
 <meta name="twitter:card" content="summary_large_image">
@@ -21,14 +21,14 @@
 <main class="page">
   <div class="top"><span class="brand">imba / features</span><nav class="tabs" aria-label="Sections"><a href="../../">Releases</a><a href="../../features/" data-on>Features</a></nav></div>
   <h1>Edits</h1>
-  <p class="idea">What a turn changed and what it reaches, before you read a line of the diff.</p>
-  <p class="why">A coding agent can change fourteen files in one turn and say it went well. Reading every diff takes longer than the turn did, and a skim lets the one line that matters slip by. Each part of the Edits box under a turn guards against one way the mind slips.</p>
+  <p class="idea">How much of the codebase a turn changed and how much of it stands on the change, before you open a file.</p>
+  <p class="why">A coding agent can change fourteen files in one turn and say it went well. Reading every diff takes longer than the turn did, and a skim lets the one line that matters slip by. The Edits box under a turn puts the goal and three figures first, and leaves the files for last.</p>
   <p class="touch">On a phone, each key on this page is a tap.</p>
   <section class="chapter" id="goal">
     <div class="words">
       <p class="step"><b>01</b>Goal</p>
       <div class="trap"><p class="tl">The trap</p><p class="thought">“Fourteen files changed. It got a lot done.”</p><p class="bias"><b>Effort heuristic.</b> How much was done stands in for whether it worked.</p></div>
-      <h2>The goal, <span>then the files.</span></h2>
+      <h2>The goal <span>comes first.</span></h2>
       <p class="say">Under the Edits line stands the turn&#39;s goal in one sentence, with a tick when the agent says it got there and a cross when it says it did not. A laptop draws the 14 files under it, a tray per folder. A phone keeps them behind their count until it is tapped.</p>
     </div>
     <div class="pictures">
@@ -37,32 +37,31 @@
       </figure>
     </div>
   </section>
-  <section class="chapter" id="folders">
+  <section class="chapter wide" id="share">
     <div class="words">
-      <p class="step"><b>02</b>Folders</p>
-      <div class="trap"><p class="tl">The trap</p><p class="thought">“Fourteen files. I&#39;ll skim them.”</p><p class="bias"><b>Information overload.</b> Fourteen names in a row read as one blur, and the eye stops at the first few.</p></div>
-      <h2>Three trays, <span>the rest folded.</span></h2>
-      <p class="say">The change is drawn a tray per folder. Three folders get one each: the most work, the most reach, then the next by reach. The other three share a fourth. f, or the +3 folders tray, gives every folder its own, and m, or the 14, puts them all away. A phone opens the trays from the 14.</p>
-      <p class="keyrow"><span><kbd>f</kbd> Every folder</span><span><kbd>m</kbd> Put away</span></p>
+      <p class="step"><b>02</b>Share</p>
+      <div class="trap"><p class="tl">The trap</p><p class="thought">“228 new lines. That is a big change.”</p><p class="bias"><b>Denominator neglect.</b> A count read without the whole it comes from looks as big as it sounds.</p></div>
+      <h2>Every figure, <span>against the whole codebase.</span></h2>
+      <p class="say">The Edits line weighs the turn in three figures. Green +228 (1.6%) is the lines added, and 1.6% is the share of the codebase&#39;s lines this turn changed, added and removed together. Red −7 is the lines removed. Amber 41% is the share of the codebase&#39;s lines held in files that use what changed, so a mistake here can reach that much of the shop. Each folder carries the same three, and a file carries its lines, with its amber where code stands on it.</p>
     </div>
-    <figure class="film">
-      <video controls playsinline preload="none" poster="../../films/features/edits/three-trays.78891ff93b.png" src="../../films/features/edits/three-trays.2e31c00159.webm" aria-label="The Edits box in imba with every folder unfolded, each in its own tray"></video>
-      <ol class="steps" aria-label="Steps"><li><button type="button">Three trays</button></li><li><button type="button">Every folder</button></li><li><button type="button">Put away</button></li><li><button type="button">Back</button></li></ol>
-      <script type="application/json">{"desktop":{"src":"../../films/features/edits/three-trays.2e31c00159.webm","poster":"../../films/features/edits/three-trays.78891ff93b.png","steps":[{"name":"Three trays","at":0},{"name":"Every folder","at":4.6},{"name":"Put away","at":11},{"name":"Back","at":14}]},"phone":{"src":"../../films/features/edits/three-trays-phone.e728dc5543.webm","poster":"../../films/features/edits/three-trays-phone.d2bc1f9ec9.png","steps":[{"name":"Three trays","at":0},{"name":"Every folder","at":5.6},{"name":"Put away","at":13.8},{"name":"Back","at":17.7}]}}</script>
-    </figure>
+    <div class="pictures">
+      <figure>
+        <picture><source media="(max-width: 699px)" srcset="../../films/features/edits/the-figures-phone.dd52e2103e.png" width="358" height="364"><img src="../../films/features/edits/the-figures.0e942c46b6.png" alt="The Edits line and folders of a turn in imba: 228 lines added, 1.6% of the codebase changed, 7 removed, 41% standing on it" width="1052" height="210" loading="lazy"></picture>
+      </figure>
+    </div>
   </section>
   <section class="chapter" id="weight">
     <div class="words">
       <p class="step"><b>03</b>Weight</p>
       <div class="trap"><p class="tl">The trap</p><p class="thought">“The biggest edit is the risky one.”</p><p class="bias"><b>Anchoring.</b> The first number you read, the size of an edit, becomes the measure of its risk.</p></div>
       <h2>Weight is <span>what stands on it.</span></h2>
-      <p class="say">src/giftcards took 149 new lines, and nothing in the shop stands on them yet. src/money changed five lines in round.ts, and 41% of the shop stands on them, so they carry the amber. 2, or a tap on the folder, lists its files. 1, or a tap on round.ts, opens the diff, and q or Back returns.</p>
+      <p class="say">src/giftcards took 149 new lines and carries 0%: nothing in the shop uses them yet. src/money changed five lines and carries 41%, the most amber of any folder. 2, or a tap on the folder, lists its files, and round.ts holds all of that 41%. q, or the ‹, goes back.</p>
       <p class="keyrow"><span><kbd>1–9</kbd> Open</span><span><kbd>q</kbd> Back</span></p>
     </div>
     <figure class="film">
-      <video controls playsinline preload="none" poster="../../films/features/edits/the-small-edit.a1dddc46dd.png" src="../../films/features/edits/the-small-edit.6157acf361.webm" aria-label="The diff of round.ts in imba, where half a cent now rounds to the even cent"></video>
-      <ol class="steps" aria-label="Steps"><li><button type="button">The weights</button></li><li><button type="button">Open 2</button></li><li><button type="button">Open 1</button></li><li><button type="button">Back</button></li></ol>
-      <script type="application/json">{"desktop":{"src":"../../films/features/edits/the-small-edit.6157acf361.webm","poster":"../../films/features/edits/the-small-edit.a1dddc46dd.png","steps":[{"name":"The weights","at":0},{"name":"Open 2","at":4.5},{"name":"Open 1","at":8.1},{"name":"Back","at":14.1}]},"phone":{"src":"../../films/features/edits/the-small-edit-phone.4b9881a551.webm","poster":"../../films/features/edits/the-small-edit-phone.b1331daf28.png","steps":[{"name":"The weights","at":0},{"name":"Open 2","at":4.5},{"name":"Open 1","at":8.9},{"name":"Back","at":15.8}]}}</script>
+      <video controls playsinline preload="none" poster="../../films/features/edits/the-small-edit.9af38daa94.png" src="../../films/features/edits/the-small-edit.b18e6a521c.webm" aria-label="The src/money folder listed in imba&#39;s Edits box, round.ts carrying 41%"></video>
+      <ol class="steps" aria-label="Steps"><li><button type="button">The weights</button></li><li><button type="button">Open 2</button></li><li><button type="button">Back</button></li></ol>
+      <script type="application/json">{"desktop":{"src":"../../films/features/edits/the-small-edit.b18e6a521c.webm","poster":"../../films/features/edits/the-small-edit.9af38daa94.png","steps":[{"name":"The weights","at":0},{"name":"Open 2","at":4.5},{"name":"Back","at":9.6}]},"phone":{"src":"../../films/features/edits/the-small-edit-phone.235568b94a.webm","poster":"../../films/features/edits/the-small-edit-phone.5aad6c0b29.png","steps":[{"name":"The weights","at":0},{"name":"Open 2","at":4.5},{"name":"Back","at":10.4}]}}</script>
     </figure>
   </section>
   <section class="chapter" id="reach">
@@ -74,9 +73,9 @@
       <p class="keyrow"><span><kbd>Enter</kbd> The folder on the map</span></p>
     </div>
     <figure class="film">
-      <video controls playsinline preload="none" poster="../../films/features/edits/what-stands-on-it.48defa82ad.png" src="../../films/features/edits/what-stands-on-it.dc7db0cb9e.webm" aria-label="imba&#39;s map of the src/money folder, round.ts beside the 21 files that call what changed"></video>
+      <video controls playsinline preload="none" poster="../../films/features/edits/what-stands-on-it.48defa82ad.png" src="../../films/features/edits/what-stands-on-it.7b31e84a86.webm" aria-label="imba&#39;s map of the src/money folder, round.ts beside the 21 files that call what changed"></video>
       <ol class="steps" aria-label="Steps"><li><button type="button">Open 2</button></li><li><button type="button">On the map</button></li><li><button type="button">Back</button></li></ol>
-      <script type="application/json">{"desktop":{"src":"../../films/features/edits/what-stands-on-it.dc7db0cb9e.webm","poster":"../../films/features/edits/what-stands-on-it.48defa82ad.png","steps":[{"name":"Open 2","at":0},{"name":"On the map","at":2.6},{"name":"Back","at":9.6}]},"phone":{"src":"../../films/features/edits/what-stands-on-it-phone.500a9112c8.webm","poster":"../../films/features/edits/what-stands-on-it-phone.36c3dfbd86.png","steps":[{"name":"Open 2","at":0},{"name":"On the map","at":3.4},{"name":"Back","at":11.3}]}}</script>
+      <script type="application/json">{"desktop":{"src":"../../films/features/edits/what-stands-on-it.7b31e84a86.webm","poster":"../../films/features/edits/what-stands-on-it.48defa82ad.png","steps":[{"name":"Open 2","at":0},{"name":"On the map","at":2.6},{"name":"Back","at":9.6}]},"phone":{"src":"../../films/features/edits/what-stands-on-it-phone.d5357c55a5.webm","poster":"../../films/features/edits/what-stands-on-it-phone.36c3dfbd86.png","steps":[{"name":"Open 2","at":0},{"name":"On the map","at":3.4},{"name":"Back","at":11.3}]}}</script>
     </figure>
   </section>
   <section class="chapter" id="why">
@@ -88,9 +87,9 @@
       <p class="keyrow"><span><kbd>e</kbd> Explain</span><span><kbd>n</kbd> Next</span><span><kbd>q</kbd> Close</span></p>
     </div>
     <figure class="film">
-      <video controls playsinline preload="none" poster="../../films/features/edits/step-by-step.0db40275a1.png" src="../../films/features/edits/step-by-step.2be37db4f3.webm" aria-label="imba&#39;s explanation of a turn, on the step about rounding half a cent to the even cent"></video>
+      <video controls playsinline preload="none" poster="../../films/features/edits/step-by-step.0db40275a1.png" src="../../films/features/edits/step-by-step.1a29227d24.webm" aria-label="imba&#39;s explanation of a turn, on the step about rounding half a cent to the even cent"></video>
       <ol class="steps" aria-label="Steps"><li><button type="button">Explain</button></li><li><button type="button">Next</button></li><li><button type="button">Step 5</button></li><li><button type="button">Close</button></li></ol>
-      <script type="application/json">{"desktop":{"src":"../../films/features/edits/step-by-step.2be37db4f3.webm","poster":"../../films/features/edits/step-by-step.0db40275a1.png","steps":[{"name":"Explain","at":0},{"name":"Next","at":5.6},{"name":"Step 5","at":13.7},{"name":"Close","at":20.7}]},"phone":{"src":"../../films/features/edits/step-by-step-phone.6aa338213a.webm","poster":"../../films/features/edits/step-by-step-phone.2cc6a71f6f.png","steps":[{"name":"Explain","at":0},{"name":"Next","at":6.4},{"name":"Step 5","at":21.1},{"name":"Close","at":29}]}}</script>
+      <script type="application/json">{"desktop":{"src":"../../films/features/edits/step-by-step.1a29227d24.webm","poster":"../../films/features/edits/step-by-step.0db40275a1.png","steps":[{"name":"Explain","at":0},{"name":"Next","at":5.6},{"name":"Step 5","at":13.7},{"name":"Close","at":20.7}]},"phone":{"src":"../../films/features/edits/step-by-step-phone.3670ea97f6.webm","poster":"../../films/features/edits/step-by-step-phone.2cc6a71f6f.png","steps":[{"name":"Explain","at":0},{"name":"Next","at":6.4},{"name":"Step 5","at":21.1},{"name":"Close","at":29}]}}</script>
     </figure>
   </section>
   <section class="chapter" id="log">
@@ -102,21 +101,36 @@
       <p class="keyrow"><span><kbd>l</kbd> Log</span><span><kbd>1–9</kbd> Open</span></p>
     </div>
     <figure class="film">
-      <video controls playsinline preload="none" poster="../../films/features/edits/the-log.99adc4be5b.png" src="../../films/features/edits/the-log.85eb355b62.webm" aria-label="imba&#39;s Log of the gift card spawn in two chapters, with the turn that settled the rounding open"></video>
+      <video controls playsinline preload="none" poster="../../films/features/edits/the-log.99adc4be5b.png" src="../../films/features/edits/the-log.e86f2d641f.webm" aria-label="imba&#39;s Log of the gift card spawn in two chapters, with the turn that settled the rounding open"></video>
       <ol class="steps" aria-label="Steps"><li><button type="button">The Log</button></li><li><button type="button">Open 4</button></li></ol>
-      <script type="application/json">{"desktop":{"src":"../../films/features/edits/the-log.85eb355b62.webm","poster":"../../films/features/edits/the-log.99adc4be5b.png","steps":[{"name":"The Log","at":0},{"name":"Open 4","at":5.1}]},"phone":{"src":"../../films/features/edits/the-log-phone.16c4e8611c.webm","poster":"../../films/features/edits/the-log-phone.d8dc1707b1.png","steps":[{"name":"The Log","at":0},{"name":"Open 4","at":5.9}]}}</script>
+      <script type="application/json">{"desktop":{"src":"../../films/features/edits/the-log.e86f2d641f.webm","poster":"../../films/features/edits/the-log.99adc4be5b.png","steps":[{"name":"The Log","at":0},{"name":"Open 4","at":5.1}]},"phone":{"src":"../../films/features/edits/the-log-phone.95678b41a3.webm","poster":"../../films/features/edits/the-log-phone.d8dc1707b1.png","steps":[{"name":"The Log","at":0},{"name":"Open 4","at":5.9}]}}</script>
+    </figure>
+  </section>
+  <section class="chapter" id="files">
+    <div class="words">
+      <p class="step"><b>07</b>Files</p>
+      <div class="trap"><p class="tl">The trap</p><p class="thought">“Fourteen files. I&#39;ll skim them.”</p><p class="bias"><b>Information overload.</b> Fourteen names in a row read as one blur, and the eye stops at the first few.</p></div>
+      <h2>The files <span>come last.</span></h2>
+      <p class="say">When the figures, the map and the explanation still leave a question, the files answer it, a tray per folder. Three folders get a tray each: the most work, the most reach, then the next by reach. The other three share a fourth. f, or the +3 folders tray, gives every folder its own. 2, or a tap on src/money, lists its files, and 1, or a tap on round.ts, opens the diff. q or Back returns. A phone opens the trays from the 14.</p>
+      <p class="keyrow"><span><kbd>f</kbd> Every folder</span><span><kbd>1–9</kbd> Open</span><span><kbd>q</kbd> Back</span></p>
+    </div>
+    <figure class="film">
+      <video controls playsinline preload="none" poster="../../films/features/edits/the-files.332ddb30b8.png" src="../../films/features/edits/the-files.857263198c.webm" aria-label="The diff of round.ts in imba, where half a cent now rounds to the even cent"></video>
+      <ol class="steps" aria-label="Steps"><li><button type="button">Trays</button></li><li><button type="button">Every</button></li><li><button type="button">Open 2</button></li><li><button type="button">Open 1</button></li><li><button type="button">Back</button></li></ol>
+      <script type="application/json">{"desktop":{"src":"../../films/features/edits/the-files.857263198c.webm","poster":"../../films/features/edits/the-files.332ddb30b8.png","steps":[{"name":"Trays","at":0},{"name":"Every","at":5},{"name":"Open 2","at":9.6},{"name":"Open 1","at":12.6},{"name":"Back","at":18.7}]},"phone":{"src":"../../films/features/edits/the-files-phone.d9a8f40e70.webm","poster":"../../films/features/edits/the-files-phone.6ae0df2381.png","steps":[{"name":"Trays","at":0},{"name":"Every","at":5.9},{"name":"Open 2","at":11.3},{"name":"Open 1","at":15.2},{"name":"Back","at":22.1}]}}</script>
     </figure>
   </section>
   <section class="traps" id="traps">
-    <p class="kick">Six traps</p>
+    <p class="kick">Seven traps</p>
     <h2>Your mind slips. <span>Edits catches it.</span></h2>
     <ol class="trap-cards">
       <li><span class="no">01 Goal</span><s>“It got a lot done.”</s><small>Effort heuristic</small><span class="fix">The goal first</span></li>
-      <li><span class="no">02 Folders</span><s>“Fourteen files. I&#39;ll skim them.”</s><small>Information overload</small><span class="fix">Three trays<span class="caps"><kbd>f</kbd> <kbd>m</kbd></span></span></li>
+      <li><span class="no">02 Share</span><s>“That is a big change.”</s><small>Denominator neglect</small><span class="fix">Each figure against the whole</span></li>
       <li><span class="no">03 Weight</span><s>“The biggest edit is the risky one.”</s><small>Anchoring</small><span class="fix">What stands on it<span class="caps"><kbd>1–9</kbd></span></span></li>
       <li><span class="no">04 Reach</span><s>“Only these files can break.”</s><small>What you see is all there is</small><span class="fix">The map<span class="caps"><kbd>Enter</kbd> <kbd>r</kbd></span></span></li>
       <li><span class="no">05 Why</span><s>“I can see why it changed.”</s><small>Illusion of explanatory depth</small><span class="fix">Explain, step by step<span class="caps"><kbd>e</kbd></span></span></li>
       <li><span class="no">06 Log</span><s>“I remember what came before.”</s><small>Recency bias</small><span class="fix">The Log<span class="caps"><kbd>l</kbd></span></span></li>
+      <li><span class="no">07 Files</span><s>“Fourteen files. I&#39;ll skim them.”</s><small>Information overload</small><span class="fix">Files last<span class="caps"><kbd>f</kbd> <kbd>1–9</kbd></span></span></li>
     </ol>
   </section>
   <p class="rest">A file&#39;s block opens its diff, and a tray&#39;s +N lists the rest of that folder.</p>

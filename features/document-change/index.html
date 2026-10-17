@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Document card in imba</title>
-<meta name="description" content="See what a bot did to a document as the document, not as a diff.">
+<meta name="description" content="See what an agent did to a document as the document, not as a diff.">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="imba">
 <meta property="og:title" content="Document card in imba">
-<meta property="og:description" content="See what a bot did to a document as the document, not as a diff.">
+<meta property="og:description" content="See what an agent did to a document as the document, not as a diff.">
 <meta property="og:image" content="https://hr-hristov.github.io/imba-releases/films/features/document-change/the-count.4e5187d86c.png">
 <meta property="og:url" content="https://hr-hristov.github.io/imba-releases/features/document-change/">
 <meta name="twitter:card" content="summary_large_image">
@@ -21,18 +21,18 @@
 <main class="page">
   <div class="top"><span class="brand">imba / features</span><nav class="tabs" aria-label="Sections"><a href="../../">Releases</a><a href="../../features/" data-on>Features</a></nav></div>
   <h1>Document card</h1>
-  <p class="idea">See what a bot did to a document as the document, not as a diff.</p>
-  <p class="why">A bot edits a contract and says all five corrections are in. A line diff of a Word file cannot be read at all, and in a markdown one a deadline moved from 30 to 45 days hides among reworded sentences. The document card reads the file itself: it counts the promised corrections, lists the changed numbers first, and draws the page with every change in place.</p>
-  <p class="touch">On a phone, each key on this page is a tap.</p>
+  <p class="idea">See what an agent did to a document as the document, not as a diff.</p>
+  <p class="why">An agent edits a contract and says all five corrections are in. A list of changed lines cannot be read at all for a Word file, and for a markdown one a deadline moved from 30 to 45 days hides among reworded sentences. The document card reads the file itself: it counts the promised corrections, lists the changed numbers first, and draws the page with every change in place.</p>
+  <p class="touch">On a phone, tap the button named beside each key.</p>
   <section class="chapter" id="count">
     <div class="words">
       <p class="step"><b>01</b>Count</p>
       <h2>Count the corrections <span>in the file.</span></h2>
-      <p class="say">The bot adds a document card at the end of each reply that edited a Word, markdown or text file, one card per file. Its count reads 4 of 5 in red, and under it the one correction promised and not in the file: 8.3, the penalty capped at 10% of the monthly fee. The server reads the file itself, as Word shows it with every tracked change accepted, and looks for the words each correction should leave, so the count is never the bot&#39;s word for it. A full count, 5 of 5, is green. When the bot promised nothing countable, the card says how many changes it holds instead. A red line under the head says when the file, or the version picked to compare against, cannot be read. On a phone the count stands beside the words added and taken out; a laptop adds what kind each change is and who made it.</p>
+      <p class="say">A turn is one message to the agent and everything it did in answer. The agent adds a document card at the end of each turn&#39;s reply that edited a Word, markdown or text file, one card per file; when one is missing, ask the agent for that file&#39;s document card. On it the agent lists each correction it says it made, and the card checks each one. Folded, the card shows the first three changed paragraphs. Its count reads 4 of 5 in red, and under it the one correction promised and not in the file: 8.3, the penalty capped at 10% of the monthly fee. The server reads the file itself, as Word shows it with every tracked change accepted, and looks for the words each correction should leave anywhere in it, so the count is never the agent&#39;s word for it. Ask the agent for the missing 8.3, and the next reply&#39;s card counts again. A full count, 5 of 5, is green. When the agent promised nothing countable, the card says how many changes it holds instead. A red line under the head says when the file, or the version picked to compare against, cannot be read. On a phone the count stands beside the words added and taken out; a laptop adds what kind each change is and who made it.</p>
     </div>
     <div class="pictures">
       <figure>
-        <picture><source media="(max-width: 699px)" srcset="../../films/features/document-change/the-count-phone.8c332d14f8.png" width="390" height="844"><img src="../../films/features/document-change/the-count.4e5187d86c.png" alt="A document card in imba under a bot&#39;s reply: 4 of 5 corrections in the file, and the penalty cap promised but not in the file" width="1120" height="700" loading="lazy"></picture>
+        <picture><source media="(max-width: 699px)" srcset="../../films/features/document-change/the-count-phone.8c332d14f8.png" width="390" height="844"><img src="../../films/features/document-change/the-count.4e5187d86c.png" alt="A document card in imba under an agent&#39;s reply: 4 of 5 corrections in the file, and the penalty cap promised but not in the file" width="1120" height="700" loading="lazy"></picture>
       </figure>
     </div>
   </section>
@@ -40,7 +40,7 @@
     <div class="words">
       <p class="step"><b>02</b>Page</p>
       <h2>Read the document <span>as a page.</span></h2>
-      <p class="say">Unfold, or v on a laptop, draws the document as a page: inserted words green and underlined, deleted words struck where they stood, changed numbers in their own colour, clause numbers bold. Unchanged paragraphs fold into one line that counts them. Beside each paragraph on a laptop, or under it on a phone, a note says who made the change, when, and what kind, or how many changes a paragraph holds. The arrows, or n and p, step through the changes, Change 1 of 8 and on, each ringed. Fold, or v again, folds the card.</p>
+      <p class="say">Unfold, or v on a laptop, draws the whole document as a page: inserted words green and underlined, deleted words struck where they stood, changed numbers in their own colour, clause numbers bold. Unchanged paragraphs fold into one line that counts them. Beside each paragraph on a laptop, or under it on a phone, a note says who made the change, when, and what kind: inserted, deleted, reworded or number, where one person&#39;s deletion and insertion within five minutes is one rewording. A paragraph with several changes says how many. The arrows, or n and p, step through the changes, Change 1 of 8 and on, each ringed. Fold, or v again, folds the card.</p>
       <p class="keyrow"><span><kbd>v</kbd> Unfold</span><span><kbd>n</kbd> The next</span><span><kbd>p</kbd> The one before</span><span><kbd>v</kbd> Fold</span></p>
     </div>
     <figure class="film">
@@ -53,7 +53,7 @@
     <div class="words">
       <p class="step"><b>03</b>Numbers</p>
       <h2>See the numbers <span>first.</span></h2>
-      <p class="say">Folded or open, the card lists every changed figure under Numbers first, the old one struck beside the new: 30 to 45 days, 8 to 4 hours, 0.5% to 0.3%, 12 to 24 months. The Numbers only button, Only on a phone, cuts the page down to the paragraphs holding a changed number, and All changes brings every change back. On a laptop, f does the same once v has unfolded the card. The arrow, or n, steps from number to number, each ringed on the page.</p>
+      <p class="say">Folded or open, the card lists every changed figure under Numbers, above the page, the old one struck beside the new: 30 to 45 days, 8 to 4 hours, 0.5% to 0.3%, 12 to 24 months. The Numbers only button, Only on a phone, cuts the page down to the paragraphs holding a changed number, and All changes, All on a phone, brings every change back. On a laptop, f does the same once v has unfolded the card. The arrow, or n, steps from number to number, each ringed on the page.</p>
       <p class="keyrow"><span><kbd>v</kbd> Unfold</span><span><kbd>f</kbd> Numbers only</span><span><kbd>n</kbd> The next</span></p>
     </div>
     <figure class="film">
@@ -66,7 +66,7 @@
     <div class="words">
       <p class="step"><b>04</b>Against</p>
       <h2>Choose the version <span>to compare against.</span></h2>
-      <p class="say">The marks are drawn against one version, named on the card: Against: Before this turn in the card&#39;s head on a laptop, and the name alone at its foot on a phone. That button, or a on a laptop, lists every version. Before this turn is the file as the turn found it. Without tracked changes is the file with its tracked changes turned down. Then come the copies the bot named on its card, such as Sent to client, and each version of the file saved in git, older ones without word counts until picked. A copy is listed only from the spawn&#39;s folder, a folder added to the spawn, or its proofs folder. For a Word file, Before this turn needs the copy the bot kept before editing, and is missing when it kept none. The arrows, or n and p, walk the list, and Enter or a tap picks. Against Sent to client the card holds 10 changes, and two carry Priya Nair&#39;s name: the client&#39;s lawyer changed the agreement too. The pick is kept on the device for that file.</p>
+      <p class="say">The marks are drawn against one version, named on the card: Against: Before this turn in the card&#39;s head on a laptop, and the name alone at its foot on a phone. That button, or a on a laptop once v has unfolded the card, lists every version. Before this turn is the file as the turn found it. Without tracked changes is the file with every tracked change rejected: what it said before anyone&#39;s tracked edits. Then come the copies the agent named on its card, and each version saved in the folder&#39;s history in git, where only the newest few show their word counts before they are picked. Tell the agent which copy to compare against, such as the one sent to the client, and it names that copy on its card. A copy kept outside the spawn&#39;s folders stays on the list greyed out, with the reason. For a Word file, Before this turn needs a copy the agent saves before editing, and a markdown file changed outside imba&#39;s editing tools has none either; a red line then says so. Ask the agent to save a copy before its next edit, or pick a version from git. The arrows, or n and p, walk the list, and Enter or a tap picks. Against Sent to client the card holds 10 changes, and two carry Priya Nair&#39;s name: the client&#39;s lawyer changed the agreement too. The pick is kept on the device for that file.</p>
       <p class="keyrow"><span><kbd>a</kbd> The versions</span><span><kbd>n</kbd> The next</span><span><kbd>Enter</kbd> Pick</span></p>
     </div>
     <figure class="film">
@@ -79,7 +79,7 @@
     <div class="words">
       <p class="step"><b>05</b>Earlier turn</p>
       <h2>Open an earlier <span>turn&#39;s card.</span></h2>
-      <p class="say">A turn is one message to the bot and everything it did in answer. imba keeps the file as each turn left it, and the card reads that copy, so an earlier turn&#39;s card keeps showing that turn&#39;s work however the file changes later. The Log lists the spawn&#39;s turns. On a laptop, l opens it, a turn&#39;s number opens that turn, and Enter shows it whole as Full turn. On a phone, Log in the spawn&#39;s menu opens it, a tap opens a turn, and Full turn shows it whole. The first turn edited proposal.md, a markdown file, and its card is the same card: Unfold, or u on a laptop, opens it.</p>
+      <p class="say">imba keeps the file as each turn left it, and the card reads that copy, so an earlier turn&#39;s card keeps showing that turn&#39;s work however the file changes later; when no copy could be kept, the card says why. The Log lists the spawn&#39;s turns. On a laptop, l opens it, a turn&#39;s number opens that turn, and Enter shows it whole as Full turn. On a phone, Log in the spawn&#39;s menu opens it, a tap opens a turn, and Full turn shows it whole. The first turn edited proposal.md, a markdown file, and its card works the same: Unfold, or u on a laptop, opens it. A markdown file keeps no tracked changes, so its notes count changes without a name or a time, and its versions have no Without tracked changes.</p>
       <p class="keyrow"><span><kbd>l</kbd> The Log</span><span><kbd>Enter</kbd> Full turn</span><span><kbd>u</kbd> Unfold</span></p>
     </div>
     <figure class="film">
@@ -89,7 +89,7 @@
     </figure>
   </section>
 
-  <p class="rest">A reply that edited several documents carries one card for each, and v reaches the newest; a Word file&#39;s headers, footers and footnotes are read too, each under a heading of its own.</p>
+  <p class="rest">A reply that edited several documents carries one card for each, and v reaches the newest; a Word file&#39;s headers, footers and footnotes are read too, each under a heading of its own. A spreadsheet or a PDF gets no document card.</p>
   <section class="reference" id="keys">
     <p class="kick">Every key and button</p>
     <h2>Each press, <span>and its key.</span></h2>
@@ -124,6 +124,13 @@
         <li><span class="press">A turn</span><span class="caps"><kbd>1–9</kbd></span><span class="does">Opens it: what was asked, and what it did.</span></li>
         <li><span class="press">Full turn</span><span class="caps"><kbd>Enter</kbd></span><span class="does">Everything the turn did, its document cards with it.</span></li>
         <li><span class="press">Unfold</span><span class="caps"><kbd>u</kbd></span><span class="does">Unfolds the full turn&#39;s document card, or folds it.</span></li>
+      </ul>
+    </div>
+    <div class="ref-group">
+      <h3>Limits</h3>
+      <ul class="ref-rows">
+        <li><span class="press">Files</span><span class="caps"></span><span class="does">Word files, markdown and text, each version up to 64 MB.</span></li>
+        <li><span class="press">On one card</span><span class="caps"></span><span class="does">Up to 12 named copies and 100 promised corrections.</span></li>
       </ul>
     </div>
   </section>

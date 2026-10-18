@@ -28,7 +28,7 @@
     <div class="words">
       <p class="step"><b>01</b>Count</p>
       <h2>Count the corrections <span>in the file.</span></h2>
-      <p class="say">A turn is one message to the agent and everything it did in answer. The agent adds a document card at the end of each turn&#39;s reply that edited a Word, markdown or text file, one card per file; when one is missing, ask the agent for that file&#39;s document card. On it the agent lists each correction it says it made, and the card checks each one. Folded, the card shows the first three changed paragraphs. Its count reads 4 of 5 in red, and under it the one correction promised and not in the file: 8.3, the penalty capped at 10% of the monthly fee. The server reads the file itself, as Word shows it with every tracked change accepted, and looks for the words each correction should leave anywhere in it, so the count is never the agent&#39;s word for it. Ask the agent for the missing 8.3, and the next reply&#39;s card counts again. A full count, 5 of 5, is green. When the agent promised nothing countable, the card says how many changes it holds instead. A red line under the head says when the file, or the version picked to compare against, cannot be read. On a phone the count stands beside the words added and taken out; a laptop adds what kind each change is and who made it.</p>
+      <p class="say">A turn is one message to the agent and everything it did in answer. When a turn edits a Word, markdown or text file, the agent ends its reply with a document card for that file, one card per file; a spreadsheet or a PDF gets none. On it the agent lists each correction it says it made, and imba looks for the words each should leave in the file itself, as Word shows it with every tracked change accepted. Here the count reads 4 of 5 in red, and under it the correction promised and not in the file: 8.3, the penalty capped at 10% of the monthly fee. Ask the agent for the missing 8.3, and the next reply&#39;s card counts again; 5 of 5 is green. Folded, the card shows the first three changed paragraphs. On a phone the count stands beside the words added and taken out; a laptop adds what kind each change is and who made it.</p>
     </div>
     <div class="pictures">
       <figure>
@@ -66,7 +66,7 @@
     <div class="words">
       <p class="step"><b>04</b>Against</p>
       <h2>Choose the version <span>to compare against.</span></h2>
-      <p class="say">The marks are drawn against one version, named on the card: Against: Before this turn in the card&#39;s head on a laptop, and the name alone at its foot on a phone. That button, or a on a laptop once v has unfolded the card, lists every version. Before this turn is the file as the turn found it. Without tracked changes is the file with every tracked change rejected: what it said before anyone&#39;s tracked edits. Then come the copies the agent named on its card, and each version saved in the folder&#39;s history in git, where only the newest few show their word counts before they are picked. Tell the agent which copy to compare against, such as the one sent to the client, and it names that copy on its card. A copy kept outside the spawn&#39;s folders stays on the list greyed out, with the reason. For a Word file, Before this turn needs a copy the agent saves before editing; without one it is not on the list, and the card compares against the next version there. A markdown file the agent changed with a script rather than its editing tools has none either, and a red line says so. Ask the agent to save a copy before its next edit, or pick a version from git. The arrows, or n and p, walk the list, and Enter or a tap picks. Against Sent to client the card holds 10 changes, and two carry Priya Nair&#39;s name: the client&#39;s lawyer changed the agreement too. The pick is kept on the device for that file.</p>
+      <p class="say">The marks are drawn against one version, named on the card: Against: Before this turn in the card&#39;s head on a laptop, and the name alone at its foot on a phone. That button, or a on a laptop once v has unfolded the card, lists every version. Before this turn is the file as the turn found it. Without tracked changes is the file with every tracked change rejected. Then come the copies the agent named on its card, such as the one sent to the client, and each version saved in the folder&#39;s history in git. The arrows, or n and p, walk the list, and Enter or a tap picks. Against Sent to client the card holds 10 changes, and two carry Priya Nair&#39;s name: the client&#39;s lawyer changed the agreement too.</p>
       <p class="keyrow"><span><kbd>a</kbd> The versions</span><span><kbd>n</kbd> The next</span><span><kbd>Enter</kbd> Pick</span></p>
     </div>
     <figure class="film">
@@ -89,7 +89,7 @@
     </figure>
   </section>
 
-  <p class="rest">A reply that edited several documents carries one card for each, and v reaches the newest; a Word file&#39;s headers, footers and footnotes are read too, each under a heading of its own. A spreadsheet or a PDF gets no document card.</p>
+  <p class="rest">A reply that edited several documents carries one card for each, and v reaches the newest; a Word file&#39;s headers, footers and footnotes are read too, each under a heading of its own.</p>
   <section class="reference" id="keys">
     <p class="kick">Every key and button</p>
     <h2>Each press, <span>and its key.</span></h2>
@@ -114,7 +114,18 @@
       <h3>In the versions</h3>
       <ul class="ref-rows">
         <li><span class="press">The arrows</span><span class="caps"><kbd>n</kbd> <kbd>p</kbd></span><span class="does">Walks the list.</span></li>
-        <li><span class="press">Pick, or a version</span><span class="caps"><kbd>Enter</kbd></span><span class="does">Draws the marks against that version, and keeps the pick for that file.</span></li>
+        <li><span class="press">Pick, or a version</span><span class="caps"><kbd>Enter</kbd></span><span class="does">Draws the marks against that version, and keeps the pick for that file on this device.</span></li>
+      </ul>
+    </div>
+    <div class="ref-group">
+      <h3>When something is missing</h3>
+      <ul class="ref-rows">
+        <li><span class="press">No card</span><span class="caps"></span><span class="does">Ask the agent for that file&#39;s document card.</span></li>
+        <li><span class="press">Nothing to count</span><span class="caps"></span><span class="does">When the agent promised nothing countable, the card says how many changes it holds instead.</span></li>
+        <li><span class="press">A red line</span><span class="caps"></span><span class="does">Under the card&#39;s head when the file, or the version picked, cannot be read, or a markdown file the agent changed with a script has no Before this turn.</span></li>
+        <li><span class="press">Before this turn on a Word file</span><span class="caps"></span><span class="does">Needs a copy the agent saves before editing. Without one the card compares against the next version on the list; ask the agent to save one before its next edit.</span></li>
+        <li><span class="press">Another copy</span><span class="caps"></span><span class="does">Tell the agent which copy to compare against, and it names that copy on its card. A copy outside the spawn&#39;s folders stays on the list greyed out, with the reason.</span></li>
+        <li><span class="press">Older versions in git</span><span class="caps"></span><span class="does">Every version is listed; only the newest six show their counts before they are picked.</span></li>
       </ul>
     </div>
     <div class="ref-group">

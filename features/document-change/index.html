@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Document card in imba</title>
-<meta name="description" content="See what an agent did to a document as the document, not as a diff.">
+<meta name="description" content="See what an agent did to a document as the document, not as a list of changed lines.">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="imba">
 <meta property="og:title" content="Document card in imba">
-<meta property="og:description" content="See what an agent did to a document as the document, not as a diff.">
+<meta property="og:description" content="See what an agent did to a document as the document, not as a list of changed lines.">
 <meta property="og:image" content="https://hr-hristov.github.io/imba-releases/films/features/document-change/the-count.4e5187d86c.png">
 <meta property="og:url" content="https://hr-hristov.github.io/imba-releases/features/document-change/">
 <meta name="twitter:card" content="summary_large_image">
@@ -21,7 +21,7 @@
 <main class="page">
   <div class="top"><span class="brand">imba / features</span><nav class="tabs" aria-label="Sections"><a href="../../">Releases</a><a href="../../features/" data-on>Features</a></nav></div>
   <h1>Document card</h1>
-  <p class="idea">See what an agent did to a document as the document, not as a diff.</p>
+  <p class="idea">See what an agent did to a document as the document, not as a list of changed lines.</p>
   <p class="why">An agent edits a contract and says all five corrections are in. A list of changed lines cannot be read at all for a Word file, and for a markdown one a deadline moved from 30 to 45 days hides among reworded sentences. The document card reads the file itself: it counts the promised corrections, lists the changed numbers first, and draws the page with every change in place.</p>
   <p class="touch">On a phone, tap the button named beside each key.</p>
   <section class="chapter" id="count">
@@ -40,7 +40,7 @@
     <div class="words">
       <p class="step"><b>02</b>Page</p>
       <h2>Read the document <span>as a page.</span></h2>
-      <p class="say">Unfold, or v on a laptop, draws the whole document as a page: inserted words green and underlined, deleted words struck where they stood, changed numbers in their own colour, clause numbers bold. Unchanged paragraphs fold into one line that counts them. Beside each paragraph on a laptop, or under it on a phone, a note says who made the change, when, and what kind: inserted, deleted, reworded or number. One person&#39;s deletion and insertion within five minutes count as one change, read as number when a figure moved and reworded otherwise. A paragraph with several changes says how many. The arrows, or n and p, step through the changes, Change 1 of 8 and on, each ringed. Fold, or v again, folds the card.</p>
+      <p class="say">Unfold, or v on a laptop, draws the whole document as a page: inserted words green and underlined, deleted words struck where they stood, changed numbers in their own colour, clause numbers bold. Unchanged paragraphs fold into one line that counts them. Beside each paragraph on a laptop, or under it on a phone, a note says what kind of change it is, inserted, deleted, reworded or number, and who made it and when, which Word&#39;s tracked changes record. A paragraph with several changes says how many. The arrows, or n and p, step through the changes, Change 1 of 8 and on, each ringed. Fold, or v again, folds the card.</p>
       <p class="keyrow"><span><kbd>v</kbd> Unfold</span><span><kbd>n</kbd> The next</span><span><kbd>p</kbd> The one before</span><span><kbd>v</kbd> Fold</span></p>
     </div>
     <figure class="film">
@@ -66,7 +66,7 @@
     <div class="words">
       <p class="step"><b>04</b>Against</p>
       <h2>Choose the version <span>to compare against.</span></h2>
-      <p class="say">The marks are drawn against one version, named on the card: Against: Before this turn in the card&#39;s head on a laptop, and the name alone at its foot on a phone. That button, or a on a laptop once v has unfolded the card, lists every version. Before this turn is the file as the turn found it. Without tracked changes is the file with every tracked change rejected. Then come the copies the agent named on its card, such as the one sent to the client, and each version saved in the folder&#39;s history in git. The arrows, or n and p, walk the list, and Enter or a tap picks. Against Sent to client the card holds 10 changes, and two carry Priya Nair&#39;s name: the client&#39;s lawyer changed the agreement too.</p>
+      <p class="say">The marks are drawn against one version, named on the card: Against: Before this turn in the card&#39;s head on a laptop, and the name alone at its foot on a phone. That button, or a on a laptop once v has unfolded the card, lists every version. Before this turn is the file as the turn found it. Without tracked changes is the file with every tracked change rejected. Then come the copies the agent named on its card: tell the agent which file is the copy sent to the client, and it names that copy there. Last come the versions saved in git, the folder&#39;s saved history. The arrows, or n and p, walk the list, and Enter or a tap picks. Against Sent to client the card holds 10 changes, and two carry Priya Nair&#39;s name: the client&#39;s lawyer changed the agreement too.</p>
       <p class="keyrow"><span><kbd>a</kbd> The versions</span><span><kbd>n</kbd> The next</span><span><kbd>Enter</kbd> Pick</span></p>
     </div>
     <figure class="film">
@@ -123,8 +123,10 @@
         <li><span class="press">No card</span><span class="caps"></span><span class="does">Ask the agent for that file&#39;s document card.</span></li>
         <li><span class="press">Nothing to count</span><span class="caps"></span><span class="does">When the agent promised nothing countable, the card says how many changes it holds instead.</span></li>
         <li><span class="press">A red line</span><span class="caps"></span><span class="does">Under the card&#39;s head when the file, or the version picked, cannot be read, or a markdown file the agent changed with a script has no Before this turn.</span></li>
-        <li><span class="press">Before this turn on a Word file</span><span class="caps"></span><span class="does">Needs a copy the agent saves before editing. Without one the card compares against the next version on the list; ask the agent to save one before its next edit.</span></li>
-        <li><span class="press">Another copy</span><span class="caps"></span><span class="does">Tell the agent which copy to compare against, and it names that copy on its card. A copy outside the spawn&#39;s folders stays on the list greyed out, with the reason.</span></li>
+        <li><span class="press">Before this turn on a Word file</span><span class="caps"></span><span class="does">Needs a copy the agent saves before editing. Without one it is not listed, and the card compares against the first version listed; ask the agent to save one before its next edit.</span></li>
+        <li><span class="press">A copy outside the folders</span><span class="caps"></span><span class="does">A copy kept outside the spawn&#39;s folders stays on the list greyed out, with the reason.</span></li>
+        <li><span class="press">No name or time</span><span class="caps"></span><span class="does">Names and times come from Word&#39;s tracked changes, so a markdown file, or a Word file the agent changed without tracking, shows changes without them.</span></li>
+        <li><span class="press">Reworded</span><span class="caps"></span><span class="does">One person&#39;s deletion and insertion within five minutes count as one change: number when a figure moved, reworded otherwise.</span></li>
         <li><span class="press">Older versions in git</span><span class="caps"></span><span class="does">Every version is listed; only the newest six show their counts before they are picked.</span></li>
       </ul>
     </div>

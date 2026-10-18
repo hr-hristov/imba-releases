@@ -22,13 +22,13 @@
   <div class="top"><span class="brand">imba / features</span><nav class="tabs" aria-label="Sections"><a href="../../">Releases</a><a href="../../features/" data-on>Features</a></nav></div>
   <h1>Document card</h1>
   <p class="idea">See what an agent did to a document as the document, not as a list of changed lines.</p>
-  <p class="why">An agent edits a contract and says all five corrections are in. A list of changed lines cannot be read at all for a Word file, and for a markdown one a deadline moved from 30 to 45 days hides among reworded sentences. The document card reads the file itself: it counts the promised corrections, lists the changed numbers first, and draws the page with every change in place.</p>
+  <p class="why">An agent edits a contract and says all five corrections are in. The line-by-line list of changes imba shows for code cannot be read at all for a Word file, and for a markdown one a deadline moved from 30 to 45 days hides among reworded sentences. The document card reads the file itself: it counts the promised corrections, lists the changed numbers first, and draws the page with every change in place. It comes with Claude and Codex spawns alike.</p>
   <p class="touch">On a phone, tap the button named beside each key.</p>
   <section class="chapter" id="count">
     <div class="words">
       <p class="step"><b>01</b>Count</p>
       <h2>Count the corrections <span>in the file.</span></h2>
-      <p class="say">A turn is one message to the agent and everything it did in answer. When a turn edits a Word, markdown or text file, the agent ends its reply with a document card for that file, one card per file; a spreadsheet or a PDF gets none. On it the agent lists each correction it says it made, and imba looks for the words each should leave in the file itself, as Word shows it with every tracked change accepted. Here the count reads 4 of 5 in red, and under it the correction promised and not in the file: 8.3, the penalty capped at 10% of the monthly fee. Ask the agent for the missing 8.3, and the next reply&#39;s card counts again; 5 of 5 is green. Folded, the card shows the first three changed paragraphs. On a phone the count stands beside the words added and taken out; a laptop adds what kind each change is and who made it.</p>
+      <p class="say">The agent says all five corrections are in; the card finds four in the file. When a turn, one message to the agent and everything it did in answer, edits a Word, markdown or text file, the agent ends its reply with a document card for that file, one card per file; a spreadsheet or a PDF gets none. On it the agent lists each correction it says it made, and imba looks for the words each should leave in the file itself, as Word shows it with every tracked change accepted. Here the count reads 4 of 5 in red, and under it the correction promised and not in the file: 8.3, the penalty capped at 10% of the monthly fee. Ask the agent for the missing 8.3, and the next reply&#39;s card counts again; 5 of 5 is green. Folded, the card shows the first three changed paragraphs. On a phone the count stands beside the words added and taken out; a laptop adds what kind each change is and who made it.</p>
     </div>
     <div class="pictures">
       <figure>
@@ -66,7 +66,7 @@
     <div class="words">
       <p class="step"><b>04</b>Against</p>
       <h2>Choose the version <span>to compare against.</span></h2>
-      <p class="say">The marks are drawn against one version, named on the card: Against: Before this turn in the card&#39;s head on a laptop, and the name alone at its foot on a phone. That button, or a on a laptop once v has unfolded the card, lists every version. Before this turn is the file as the turn found it. Without tracked changes is the file with every tracked change rejected. Then come the copies the agent named on its card: tell the agent which file is the copy sent to the client, and it names that copy there. Last come the versions saved in git, the folder&#39;s saved history. The arrows, or n and p, walk the list, and Enter or a tap picks. Against Sent to client the card holds 10 changes, and two carry Priya Nair&#39;s name: the client&#39;s lawyer changed the agreement too.</p>
+      <p class="say">The marks are drawn against one version, named on the card: Against: Before this turn in the card&#39;s head on a laptop, and the version&#39;s name and date at its foot on a phone. That button, or a on a laptop once v has unfolded the card, lists every version. Before this turn is the file as the turn found it. Without tracked changes is the file with every tracked change rejected. Then come the copies the agent named on its card, and last the versions saved in git, the folder&#39;s saved history. To compare against the copy that went to the client, tell the agent so, such as “Sent to client is Support agreement v3.docx”, and it names that copy on its card. The arrows, or n and p, walk the list, and Enter or a tap picks. Against Sent to client the card holds 10 changes, and two carry the name of Priya Nair, the client&#39;s lawyer: she changed the agreement too.</p>
       <p class="keyrow"><span><kbd>a</kbd> The versions</span><span><kbd>n</kbd> The next</span><span><kbd>Enter</kbd> Pick</span></p>
     </div>
     <figure class="film">
@@ -79,7 +79,7 @@
     <div class="words">
       <p class="step"><b>05</b>Earlier turn</p>
       <h2>Open an earlier <span>turn&#39;s card.</span></h2>
-      <p class="say">imba keeps the file as each turn left it, and the card reads that copy, so an earlier turn&#39;s card keeps showing that turn&#39;s work however the file changes later; when no copy could be kept, the card says why. The Log lists the spawn&#39;s turns. On a laptop, l opens it, a turn&#39;s number opens that turn, and Enter shows it whole as Full turn. On a phone, Log in the spawn&#39;s menu opens it, a tap opens a turn, and Full turn shows it whole. The first turn edited proposal.md, a markdown file, and its card works the same: Unfold, or u on a laptop, opens it. A markdown file keeps no tracked changes, so its notes count changes without a name or a time, and its versions have no Without tracked changes.</p>
+      <p class="say">imba keeps the file as each turn left it, and the card reads that copy, so an earlier turn&#39;s card keeps showing that turn&#39;s work however the file changes later; when no copy could be kept, the card says why. The Log lists the spawn&#39;s turns. On a laptop, l opens it, a turn&#39;s number opens that turn, and Enter shows it whole as Full turn. On a phone, Log in the spawn&#39;s menu opens it, a tap opens a turn, and Full turn shows it whole. The first turn edited proposal.md, a markdown file, and its card works the same: Unfold, or u on a laptop, opens it; in the Log the key is u, since v belongs to the spawn&#39;s newest card. A markdown file keeps no tracked changes, so its notes count changes without a name or a time, and its versions have no Without tracked changes.</p>
       <p class="keyrow"><span><kbd>l</kbd> The Log</span><span><kbd>Enter</kbd> Full turn</span><span><kbd>u</kbd> Unfold</span></p>
     </div>
     <figure class="film">
@@ -107,7 +107,7 @@
         <li><span class="press">Numbers only, or Only on a phone</span><span class="caps"><kbd>f</kbd></span><span class="does">Shows only the paragraphs with a changed number; All changes, or f again, shows every change.</span></li>
         <li><span class="press">The arrows</span><span class="caps"><kbd>n</kbd> <kbd>p</kbd></span><span class="does">Steps to the next change, or the one before, and rings it.</span></li>
         <li><span class="press">Against</span><span class="caps"><kbd>a</kbd></span><span class="does">Opens the versions the marks can be drawn against, or closes them.</span></li>
-        <li><span class="press"></span><span class="caps"><kbd>q</kbd></span><span class="does">Closes the versions, then folds the card; on a phone, Against and Fold do the same.</span></li>
+        <li><span class="press">Back</span><span class="caps"><kbd>q</kbd></span><span class="does">Closes the versions, then folds the card; on a phone, Against and Fold do the same.</span></li>
       </ul>
     </div>
     <div class="ref-group">
@@ -142,7 +142,7 @@
     <div class="ref-group">
       <h3>Limits</h3>
       <ul class="ref-rows">
-        <li><span class="press">Files</span><span class="caps"></span><span class="does">Word files, markdown and text, each version up to 64 MB.</span></li>
+        <li><span class="press">Files</span><span class="caps"></span><span class="does">Word files saved as .docx, markdown and text, each version up to 64 MB. An old .doc file shows a red line until it is saved as .docx.</span></li>
         <li><span class="press">On one card</span><span class="caps"></span><span class="does">Up to 12 named copies and 100 promised corrections.</span></li>
       </ul>
     </div>
